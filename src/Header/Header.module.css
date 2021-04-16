@@ -76,6 +76,12 @@ hr {
   border: 1px solid #efefef;
 }
 
+@media screen and (max-width: 628px) {
+  .header {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 512px) {
   .header {
     margin: 0 2%;
