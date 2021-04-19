@@ -3,7 +3,7 @@ import ProductCard from "./Products/Product-Card";
 import styles from "./Main.module.css";
 
 function Main() {
-  const [item, setItem] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/catalogue")
@@ -14,27 +14,25 @@ function Main() {
         return res.json();
       })
       .then((data) => {
-        setItem(data);
+        setItems(data);
       })
       .catch((error) => {
         console.log(error.message);
       });
   }, []);
 
-  function filterByPrice() {
-    const sortedByPriceItems = [...item].sort((a, b) => {
+  function sortByPrice() {
+    const sortedByPriceItems = [...items].sort((a, b) => {
       return a.price - b.price;
     });
-    setItem(sortedByPriceItems);
-    console.log(item);
+    setItems(sortedByPriceItems);
   }
 
-  function undoFilterByPrice() {
-    const undoPriceSort = [...item].sort((a, b) => {
+  function undoSortByPrice() {
+    const undoPriceSort = [...items].sort((a, b) => {
       return a.key - b.key;
     });
-    setItem(undoPriceSort);
-    console.log(item);
+    setItems(undoPriceSort);
   }
 
   return (
@@ -43,15 +41,15 @@ function Main() {
         <ul className={styles.filters}>
           <li className={styles.priceSwitch}>
             <label>Sort by price ascending</label>
-            <input type="radio" name="price" onClick={filterByPrice} />
+            <input type="radio" name="price" onClick={sortByPrice} />
           </li>
           <li className={styles.nopriceSwitch}>
             <label>Undo price filter</label>
-            <input type="radio" name="price" onClick={undoFilterByPrice} />
+            <input type="radio" name="price" onClick={undoSortByPrice} />
           </li>
         </ul>
       </form>
-      <ProductCard item={item} />
+      <ProductCard items={items} />
     </div>
   );
 }

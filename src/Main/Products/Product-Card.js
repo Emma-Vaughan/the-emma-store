@@ -1,9 +1,9 @@
 import styles from "./Product-Card.module.css";
 
-function ProductCard({ item }) {
+function ProductCard({ items }) {
   return (
     <div className={styles.cardParent}>
-      {item.map((product) => (
+      {items.map((product) => (
         <div className={styles.card}>
           <img src={product.img} />
           <h4>{product.description}</h4>
