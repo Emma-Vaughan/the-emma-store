@@ -1,0 +1,29 @@
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.filters li {
+  margin: 0 5px;
+}
+
+.filters input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ef6530;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.priceSwitch {
+  align-items: center;
+}
