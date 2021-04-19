@@ -4,7 +4,6 @@ import styles from "./Main.module.css";
 
 function Main() {
   const [item, setItem] = useState([]);
-  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/catalogue")
