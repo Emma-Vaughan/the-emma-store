@@ -1,52 +1,52 @@
 {
   "catalogue": [
     {
-      "img": "./Images/image1.jpg",
+      "img": "/Images/image1.jpg",
       "price": 1000,
       "description": "Matisse Poster",
-      "key": 1
+      "id": 1
     },
     {
-      "img": "./Images/image2.jpg",
+      "img": "/Images/image2.jpg",
       "price": 1250,
       "description": "Natural Himalayan Candle Holder",
-      "key": 2
+      "id": 2
     },
     {
-      "img": "./Images/image3.jpg",
+      "img": "/Images/image3.jpg",
       "price": 14514,
       "description": "Wood Slab Coffee Table",
-      "key": 3
+      "id": 3
     },
     {
-      "img": "./Images/image4.jpg",
+      "img": "/Images/image4.jpg",
       "price": 1500,
       "description": "The Bath House Art Print",
-      "key": 4
+      "id": 4
     },
     {
-      "img": "./Images/image5.jpg",
+      "img": "/Images/image5.jpg",
       "price": 1599,
       "description": "Croissant Chunky Gold Ring",
-      "key": 5
+      "id": 5
     },
     {
-      "img": "./Images/image6.jpg",
+      "img": "/Images/image6.jpg",
       "price": 1000,
       "description": "Ceramic Wonky Dog Candlestick Holder",
-      "key": 6
+      "id": 6
     },
     {
-      "img": "./Images/image7.jpg",
+      "img": "/Images/image7.jpg",
       "price": 950,
       "description": "Milk Carton Shape Ceramic Jug",
-      "key": 7
+      "id": 7
     },
     {
-      "img": "./Images/image8.jpg",
+      "img": "/Images/image8.jpg",
       "price": 600,
       "description": "Recycled Glass Vases",
-      "key": 8
+      "id": 8
     }
   ]
 }

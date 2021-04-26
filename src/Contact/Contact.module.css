@@ -1,0 +1,21 @@
+.formContainer {
+  display: flex;
+  height: 750px;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactForm {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 512px) {
+  .formContainer {
+    height: 750px;
+    width: 100%;
+  }
+}

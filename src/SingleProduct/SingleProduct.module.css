@@ -1,0 +1,35 @@
+.productWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 3% 0;
+}
+
+.productWrapper img,
+.productWrapper h3,
+.productWrapper p {
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.productWrapper h3,
+.productWrapper p {
+  align-content: flex-start;
+}
+
+.productWrapper img {
+  height: 400px;
+  width: 430px;
+}
+
+.productWrapper p {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 437px) {
+  .productWrapper img {
+    height: 270px;
+    width: 300px;
+  }
+}

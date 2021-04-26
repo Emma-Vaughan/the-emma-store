@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .logo {
   color: #ef6530;
   margin-right: 2%;
@@ -17,6 +21,7 @@
   width: 75%;
   position: relative;
   border: 1px solid grey;
+  margin-left: 3%;
   padding: 8px 0 8px 15px;
   border-radius: 25px;
   order: 2;
