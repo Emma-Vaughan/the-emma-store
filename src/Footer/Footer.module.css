@@ -9,6 +9,10 @@
   background-color: #2f466c;
 }
 
+.footer a {
+  color: white;
+}
+
 .locationInfo {
   font-weight: bold;
   margin: 0 7%;
