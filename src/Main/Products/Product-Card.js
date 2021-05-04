@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Product-Card.module.css";
 
-function ProductCard({ items }) {
+function ProductCard({ catalogue }) {
   return (
     <div className={styles.cardParent}>
-      {items.map((product) => (
+      {catalogue.map((product) => (
         <div className={styles.card}>
           <Link to={`/catalogue/${product.id}`}>
             <img alt="product" src={product.img} />

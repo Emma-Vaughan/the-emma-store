@@ -1,20 +1,32 @@
 import { useState, useEffect } from "react";
 
 function useFetch(url) {
-  const [items, setItems] = useState([]);
+  const [catalogue, setCatalogue] = useState([]);
+  const [filters, setFilters] = useState([]);
 
   function sortByPrice() {
-    const sortedByPriceItems = [...items].sort((a, b) => {
+    const sortedByPrice = [...catalogue].sort((a, b) => {
       return a.price - b.price;
     });
-    setItems(sortedByPriceItems);
+    if (document.getElementById("priceSort").checked) {
+      setFilters(sortedByPrice);
+      document.getElementById("priceLabel").innerHTML = "Undo price filter";
+    } else {
+      setFilters(catalogue);
+      document.getElementById("priceLabel").innerHTML =
+        "Sort by price ascending";
+    }
   }
 
-  function undoSortByPrice() {
-    const undoPriceSort = [...items].sort((a, b) => {
-      return a.id - b.id;
+  function under10() {
+    const filtered = [...catalogue].filter((item) => {
+      return item.price < 1000;
     });
-    setItems(undoPriceSort);
+    if (document.getElementById("under10").checked) {
+      setFilters(filtered);
+    } else {
+      setFilters(catalogue);
+    }
   }
 
   useEffect(() => {
@@ -26,14 +38,15 @@ function useFetch(url) {
         return res.json();
       })
       .then((data) => {
-        setItems(data);
+        setCatalogue(data);
+        setFilters(data);
       })
       .catch((error) => {
         console.log(error.message);
       });
   }, [url]);
 
-  return { items, sortByPrice, undoSortByPrice };
+  return { filters, sortByPrice, under10 };
 }
 
 export default useFetch;
