@@ -11,10 +11,8 @@ function SingleProduct() {
       <img alt="product" src={catalogue.img} />
       <h3>{catalogue.description}</h3>
       <p>£{(catalogue.price / 100).toFixed(2)}</p>
-      {catalogue.price < catalogue.RRP ? (
+      {catalogue.price < catalogue.RRP && (
         <p className={styles.sale}> ON SALE</p>
-      ) : (
-        <p></p>
       )}
     </div>
   );
