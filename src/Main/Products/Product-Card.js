@@ -11,6 +11,9 @@ function ProductCard({ catalogue }) {
           </Link>
           <h4>{product.description}</h4>
           <p>£{(product.price / 100).toFixed(2)}</p>
+          {product.price < product.RRP && (
+            <p className={styles.sale}> ON SALE</p>
+          )}
         </div>
       ))}
     </div>

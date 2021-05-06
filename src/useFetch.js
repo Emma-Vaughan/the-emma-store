@@ -48,7 +48,7 @@ function useFetch(url) {
       });
   }, [url]);
 
-  return { filters, sortByPrice, under10, price };
+  return { catalogue, filters, sortByPrice, under10, price };
 }
 
 export default useFetch;
