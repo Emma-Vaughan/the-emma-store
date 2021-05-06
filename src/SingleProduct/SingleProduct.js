@@ -4,13 +4,18 @@ import { useParams } from "react-router-dom";
 
 function SingleProduct() {
   const { id } = useParams();
-  const { items } = useFetch("http://localhost:8000/catalogue/" + id);
+  const { catalogue } = useFetch("http://localhost:8000/catalogue/" + id);
 
   return (
     <div className={styles.productWrapper}>
-      <img alt="product" src={items.img} />
-      <h3>{items.description}</h3>
-      <p>£{(items.price / 100).toFixed(2)}</p>
+      <img alt="product" src={catalogue.img} />
+      <h3>{catalogue.description}</h3>
+      <p>£{(catalogue.price / 100).toFixed(2)}</p>
+      {catalogue.price < catalogue.RRP ? (
+        <p className={styles.sale}> ON SALE</p>
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 }

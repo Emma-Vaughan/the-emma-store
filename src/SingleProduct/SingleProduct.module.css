@@ -27,6 +27,10 @@
   letter-spacing: 2px;
 }
 
+.sale {
+  color: #ef6530;
+}
+
 @media screen and (max-width: 437px) {
   .productWrapper img {
     height: 270px;

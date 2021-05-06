@@ -2,49 +2,57 @@
   "catalogue": [
     {
       "img": "/Images/image1.jpg",
-      "price": 1000,
+      "price": 800,
+      "RRP": 1000,
       "description": "Matisse Poster",
       "id": 1
     },
     {
       "img": "/Images/image2.jpg",
       "price": 1250,
+      "RRP": 1250,
       "description": "Natural Himalayan Candle Holder",
       "id": 2
     },
     {
       "img": "/Images/image3.jpg",
       "price": 14514,
+      "RRP": 18000,
       "description": "Wood Slab Coffee Table",
       "id": 3
     },
     {
       "img": "/Images/image4.jpg",
       "price": 1500,
+      "RRP": 2000,
       "description": "The Bath House Art Print",
       "id": 4
     },
     {
       "img": "/Images/image5.jpg",
       "price": 1599,
+      "RRP": 1599,
       "description": "Croissant Chunky Gold Ring",
       "id": 5
     },
     {
       "img": "/Images/image6.jpg",
       "price": 1000,
+      "RRP": 1000,
       "description": "Ceramic Wonky Dog Candlestick Holder",
       "id": 6
     },
     {
       "img": "/Images/image7.jpg",
       "price": 950,
+      "RRP": 1000,
       "description": "Milk Carton Shape Ceramic Jug",
       "id": 7
     },
     {
       "img": "/Images/image8.jpg",
       "price": 600,
+      "RRP": 600,
       "description": "Recycled Glass Vases",
       "id": 8
     }
