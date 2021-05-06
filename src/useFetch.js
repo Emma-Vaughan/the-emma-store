@@ -3,18 +3,20 @@ import { useState, useEffect } from "react";
 function useFetch(url) {
   const [catalogue, setCatalogue] = useState([]);
   const [filters, setFilters] = useState([]);
+  const [price, setPrice] = useState(false);
 
   function sortByPrice() {
     const sortedByPrice = [...catalogue].sort((a, b) => {
       return a.price - b.price;
     });
-    if (document.getElementById("priceSort").checked) {
+
+    const newPrice = price ? false : true;
+
+    setPrice(newPrice);
+    if (newPrice === true) {
       setFilters(sortedByPrice);
-      document.getElementById("priceLabel").innerHTML = "Undo price filter";
     } else {
       setFilters(catalogue);
-      document.getElementById("priceLabel").innerHTML =
-        "Sort by price ascending";
     }
   }
 
@@ -46,7 +48,7 @@ function useFetch(url) {
       });
   }, [url]);
 
-  return { filters, sortByPrice, under10 };
+  return { filters, sortByPrice, under10, price };
 }
 
 export default useFetch;

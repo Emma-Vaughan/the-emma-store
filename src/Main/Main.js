@@ -3,7 +3,7 @@ import styles from "./Main.module.css";
 import useFetch from "../useFetch";
 
 function Main() {
-  const { filters, sortByPrice, undoSortByPrice, under10 } = useFetch(
+  const { filters, sortByPrice, undoSortByPrice, under10, price } = useFetch(
     "http://localhost:8000/catalogue"
   );
 
@@ -12,7 +12,8 @@ function Main() {
       <form>
         <ul className={styles.filters}>
           <li className={styles.priceSwitch}>
-            <label id="priceLabel">Sort by price ascending</label>
+            {!price && <label>Sort by price ascending</label>}
+            {price && <label>Undo price filter</label>}
             <input
               id="priceSort"
               type="checkbox"
@@ -22,7 +23,7 @@ function Main() {
           </li>
           <li className={styles.under10}>
             <label>Under £10</label>
-            <input id="under10" type="checkbox" name="ten" onChange={under10} />
+            <input id="under10" type="checkbox" name="ten" onClick={under10} />
           </li>
         </ul>
       </form>
