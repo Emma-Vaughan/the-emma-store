@@ -14,7 +14,7 @@ This project has been created to practice:
 
 - Open a terminal to track and read the JSON catalogue of items using the command
 
-npx json-server --watch src/Catalogue.json --port 8000
+`npx json-server --watch src/Catalogue.json --port 8000`
 
 or your port of choice
 
