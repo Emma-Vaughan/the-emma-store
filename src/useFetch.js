@@ -4,6 +4,8 @@ function useFetch(url) {
   const [catalogue, setCatalogue] = useState([]);
   const [filters, setFilters] = useState([]);
   const [price, setPrice] = useState(false);
+  const [sale, setSale] = useState(false);
+  const [lessThanTen, setLessThanTen] = useState(false);
 
   function sortByPrice() {
     const sortedByPrice = [...catalogue].sort((a, b) => {
@@ -20,11 +22,32 @@ function useFetch(url) {
     }
   }
 
+  function saleItems() {
+    const sortSale = [...catalogue].filter((item) => {
+      return item.price < item.RRP;
+    });
+
+    const onSale = sale ? false : true;
+
+    setSale(onSale);
+
+    if (onSale === true) {
+      setFilters(sortSale);
+    } else {
+      setFilters(catalogue);
+    }
+  }
+
   function under10() {
     const filtered = [...catalogue].filter((item) => {
       return item.price < 1000;
     });
-    if (document.getElementById("under10").checked) {
+
+    const underTen = lessThanTen ? false : true;
+
+    setLessThanTen(underTen);
+
+    if (underTen === true) {
       setFilters(filtered);
     } else {
       setFilters(catalogue);
@@ -48,7 +71,7 @@ function useFetch(url) {
       });
   }, [url]);
 
-  return { catalogue, filters, sortByPrice, under10, price };
+  return { catalogue, filters, sortByPrice, under10, price, saleItems };
 }
 
 export default useFetch;
