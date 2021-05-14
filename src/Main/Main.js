@@ -3,9 +3,35 @@ import styles from "./Main.module.css";
 import useFetch from "../useFetch";
 
 function Main() {
-  const { filters, sortByPrice, under10, price, saleItems } = useFetch(
-    "http://localhost:8000/catalogue"
-  );
+  const {
+    sortByPrice,
+    under10,
+    price,
+    catalogue,
+    saleItems,
+    sale,
+    lessThanTen,
+  } = useFetch("http://localhost:8000/catalogue");
+
+  let itemsToRender = [...catalogue];
+
+  if (sale === true) {
+    itemsToRender = itemsToRender.filter((item) => {
+      return item.price < item.RRP;
+    });
+  }
+
+  if (price === true) {
+    itemsToRender = itemsToRender.sort((a, b) => {
+      return a.price - b.price;
+    });
+  }
+
+  if (lessThanTen === true) {
+    itemsToRender = itemsToRender.filter((item) => {
+      return item.price < 1000;
+    });
+  }
 
   return (
     <div>
@@ -31,7 +57,7 @@ function Main() {
           </li>
         </ul>
       </form>
-      <ProductCard catalogue={filters} />
+      <ProductCard catalogue={itemsToRender} />
     </div>
   );
 }
