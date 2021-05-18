@@ -2,22 +2,6 @@ import { useState, useEffect } from "react";
 
 function useFetch(url) {
   const [catalogue, setCatalogue] = useState([]);
-  // const [filters, setFilters] = useState([]);
-  const [price, setPrice] = useState(false);
-  const [sale, setSale] = useState(false);
-  const [lessThanTen, setLessThanTen] = useState(false);
-
-  function sortByPrice() {
-    setPrice(!price);
-  }
-
-  function saleItems() {
-    setSale(!sale);
-  }
-
-  function under10() {
-    setLessThanTen(!lessThanTen);
-  }
 
   useEffect(() => {
     fetch(url)
@@ -37,12 +21,6 @@ function useFetch(url) {
 
   return {
     catalogue,
-    sortByPrice,
-    under10,
-    price,
-    saleItems,
-    sale,
-    lessThanTen,
   };
 }
 
