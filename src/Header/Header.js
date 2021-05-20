@@ -1,14 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
+import { useDispatch } from "react-redux";
+import { reset } from "../actions";
 
 function Header() {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <div className={styles.header}>
-        <Link to="/">
-          <h1 className={styles.logo}>Emma</h1>
-        </Link>
+        <h1 className={styles.logo} onClick={() => dispatch(reset())}>
+          Emma
+        </h1>
         <button className={styles.signIn}>Sign In</button>
         <div className={styles.basket}>
           <i class="fa fa-shopping-basket"></i>

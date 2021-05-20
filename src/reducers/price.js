@@ -1,7 +1,9 @@
 const priceReducer = (state = false, action) => {
   switch (action.type) {
     case "PRICE":
-      return (state = !state);
+      return !state;
+    case "RESET":
+      return false;
     default:
       return state;
   }

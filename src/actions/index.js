@@ -4,6 +4,12 @@ export const catalogue = () => {
   };
 };
 
+export const reset = () => {
+  return {
+    type: "RESET",
+  };
+};
+
 export const price = () => {
   return {
     type: "PRICE",
