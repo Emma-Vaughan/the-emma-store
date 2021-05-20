@@ -16,21 +16,15 @@ function Main() {
   let itemsToRender = [...catalogue];
 
   if (saleState === true) {
-    itemsToRender = itemsToRender.filter((item) => {
-      return item.price < item.RRP;
-    });
+    itemsToRender = itemsToRender.filter((item) => item.price < item.RRP);
   }
 
   if (priceState === true) {
-    itemsToRender = itemsToRender.sort((a, b) => {
-      return a.price - b.price;
-    });
+    itemsToRender = itemsToRender.sort((a, b) => a.price - b.price);
   }
 
   if (lessThanTenState === true) {
-    itemsToRender = itemsToRender.filter((item) => {
-      return item.price < 1000;
-    });
+    itemsToRender = itemsToRender.filter((item) => item.price < 1000);
   }
 
   return (
