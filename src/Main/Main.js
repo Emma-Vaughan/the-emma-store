@@ -37,6 +37,7 @@ function Main() {
             <input
               id="priceSort"
               type="checkbox"
+              checked={priceState}
               name="price"
               onClick={() => dispatch(price())}
             />
@@ -46,6 +47,7 @@ function Main() {
             <input
               id="under10"
               type="checkbox"
+              checked={lessThanTenState}
               name="ten"
               onClick={() => dispatch(lessThanTen())}
             />
@@ -55,6 +57,7 @@ function Main() {
             <input
               id="sale"
               type="checkbox"
+              checked={saleState}
               name="sale"
               onClick={() => dispatch(sale())}
             />
