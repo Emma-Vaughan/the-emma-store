@@ -13,6 +13,7 @@
   color: #ef6530;
   margin-right: 2%;
   order: 1;
+  cursor: pointer;
 }
 
 .searchBar {

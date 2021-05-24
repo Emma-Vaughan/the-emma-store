@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px 0 60px;
+  padding: 25px 0;
 }
 
 .card {
