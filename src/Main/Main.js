@@ -15,15 +15,15 @@ function Main() {
 
   let itemsToRender = [...catalogue];
 
-  if (saleState === true) {
+  if (saleState) {
     itemsToRender = itemsToRender.filter((item) => item.price < item.RRP);
   }
 
-  if (priceState === true) {
+  if (priceState) {
     itemsToRender = itemsToRender.sort((a, b) => a.price - b.price);
   }
 
-  if (lessThanTenState === true) {
+  if (lessThanTenState) {
     itemsToRender = itemsToRender.filter((item) => item.price < 1000);
   }
 
