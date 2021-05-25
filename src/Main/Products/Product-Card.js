@@ -5,7 +5,7 @@ function ProductCard({ catalogue }) {
   return (
     <div className={styles.cardParent}>
       {catalogue.map((product) => (
-        <div className={styles.card}>
+        <div className={styles.card} key={product.id}>
           <Link to={`/catalogue/${product.id}`}>
             <img alt="product" src={product.img} />
           </Link>
