@@ -39,7 +39,7 @@ function Main() {
               type="checkbox"
               checked={priceState}
               name="price"
-              onClick={() => dispatch(price())}
+              onChange={() => dispatch(price())}
             />
           </li>
           <li className={styles.under10}>
@@ -49,7 +49,7 @@ function Main() {
               type="checkbox"
               checked={lessThanTenState}
               name="ten"
-              onClick={() => dispatch(lessThanTen())}
+              onChange={() => dispatch(lessThanTen())}
             />
           </li>
           <li className={styles.sale}>
@@ -59,7 +59,7 @@ function Main() {
               type="checkbox"
               checked={saleState}
               name="sale"
-              onClick={() => dispatch(sale())}
+              onChange={() => dispatch(sale())}
             />
           </li>
         </ul>
