@@ -28,7 +28,7 @@ function Main() {
   }
 
   return (
-    <div>
+    <div className={styles.main}>
       <form>
         <ul className={styles.filters}>
           <li className={styles.priceSwitch}>

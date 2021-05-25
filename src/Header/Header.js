@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { reset } from "../actions";
 
@@ -9,9 +10,11 @@ function Header() {
   return (
     <div>
       <div className={styles.header}>
-        <h1 className={styles.logo} onClick={() => dispatch(reset())}>
-          Emma
-        </h1>
+        <Link to="/">
+          <h1 className={styles.logo} onClick={() => dispatch(reset())}>
+            Emma
+          </h1>
+        </Link>
         <button className={styles.signIn}>Sign In</button>
         <div className={styles.basket}>
           <i class="fa fa-shopping-basket"></i>
