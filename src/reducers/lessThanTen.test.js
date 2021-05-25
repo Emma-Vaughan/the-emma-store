@@ -1,6 +1,6 @@
 import lessThanTenReducer from "./lessThanTen";
 
-test("false to true", () => {
+test("lessThanTen filter switches from false to true", () => {
   const currentState = false;
   const action = { type: "LESSTHANTEN" };
 
