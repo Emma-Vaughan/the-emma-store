@@ -17,12 +17,12 @@ function Header() {
         </Link>
         <button className={styles.signIn}>Sign In</button>
         <div className={styles.basket}>
-          <i class="fa fa-shopping-basket"></i>
+          <i className="fa fa-shopping-basket"></i>
         </div>
         <form className={styles.searchBar}>
           <input type="text" placeholder="Search for anything" />
           <button type="submit">
-            <i class="fa fa-search"></i>
+            <i className="fa fa-search"></i>
           </button>
         </form>
       </div>
