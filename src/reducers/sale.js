@@ -1,5 +1,4 @@
 const saleReducer = (state = false, action) => {
-  console.log(action);
   switch (action.type) {
     case "SALE":
       return !state;
