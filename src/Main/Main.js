@@ -3,6 +3,7 @@ import styles from "./Main.module.css";
 import useFetch from "../useFetch";
 import { useSelector, useDispatch } from "react-redux";
 import { sale, price, lessThanTen } from "../actions/index";
+import { saleFilter, priceFilter, lessThanTenFilter } from "../filters";
 
 function Main() {
   const { catalogue } = useFetch("http://localhost:8000/catalogue");
@@ -16,15 +17,15 @@ function Main() {
   let itemsToRender = [...catalogue];
 
   if (saleState) {
-    itemsToRender = itemsToRender.filter((item) => item.price < item.RRP);
+    itemsToRender = itemsToRender.filter(saleFilter);
   }
 
   if (priceState) {
-    itemsToRender = itemsToRender.sort((a, b) => a.price - b.price);
+    itemsToRender = itemsToRender.sort(priceFilter);
   }
 
   if (lessThanTenState) {
-    itemsToRender = itemsToRender.filter((item) => item.price < 1000);
+    itemsToRender = itemsToRender.filter(lessThanTenFilter);
   }
 
   return (
