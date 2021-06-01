@@ -1,11 +1,5 @@
-export function saleFilter(item) {
-  return item.price < item.RRP;
-}
+export const saleFilter = (item) => item.price < item.RRP;
 
-export function priceFilter(a, b) {
-  return a.price - b.price;
-}
+export const priceFilter = (a, b) => a.price - b.price;
 
-export function lessThanTenFilter(item) {
-  return item.price < 1000;
-}
+export const lessThanTenFilter = (item) => item.price < 1000;
