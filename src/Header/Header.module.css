@@ -37,6 +37,10 @@
   width: 100%;
 }
 
+.searchBar :focus {
+  outline: none;
+}
+
 .searchBar button {
   background-color: #efefef;
   border: 0;
