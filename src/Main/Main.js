@@ -31,7 +31,7 @@ function Main() {
 
   if (searchState) {
     itemsToRender = itemsToRender.filter((item) =>
-      item.description.includes(searchState)
+      item.description.toLowerCase().includes(searchState.toLowerCase())
     );
   }
 
