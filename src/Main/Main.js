@@ -11,6 +11,7 @@ function Main() {
   const saleState = useSelector((state) => state.saleReducer);
   const priceState = useSelector((state) => state.priceReducer);
   const lessThanTenState = useSelector((state) => state.lessThanTenReducer);
+  const searchState = useSelector((state) => state.searchTermReducer);
 
   const dispatch = useDispatch();
 
@@ -26,6 +27,12 @@ function Main() {
 
   if (lessThanTenState) {
     itemsToRender = itemsToRender.filter(lessThanTenFilter);
+  }
+
+  if (searchState) {
+    itemsToRender = itemsToRender.filter((item) =>
+      item.description.includes(searchState)
+    );
   }
 
   return (

@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { reset, searchTerm } from "../actions";
 
 function Header() {
   const dispatch = useDispatch();
-
-  const searchState = useSelector((state) => state.searchTermReducer);
-  console.log(searchState);
 
   return (
     <div>
