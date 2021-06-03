@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { reset } from "../actions";
+import { reset, searchTerm } from "../actions";
 
 function Header() {
   const dispatch = useDispatch();
@@ -20,7 +20,11 @@ function Header() {
           <i className="fa fa-shopping-basket"></i>
         </div>
         <form className={styles.searchBar}>
-          <input type="text" placeholder="Search for anything" />
+          <input
+            onChange={(event) => dispatch(searchTerm(event.target.value))}
+            type="text"
+            placeholder="Search for anything"
+          />
           <button type="submit">
             <i className="fa fa-search"></i>
           </button>

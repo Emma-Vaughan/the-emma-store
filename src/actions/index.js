@@ -27,3 +27,10 @@ export const lessThanTen = () => {
     type: "LESSTHANTEN",
   };
 };
+
+export const searchTerm = (data) => {
+  return {
+    data: data,
+    type: "SEARCHTERM",
+  };
+};
