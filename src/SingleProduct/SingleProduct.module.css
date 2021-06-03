@@ -3,7 +3,7 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  margin: 3% 0 0;
+  margin: 3% 0;
 }
 
 .productWrapper img,
@@ -30,6 +30,11 @@
 
 .productWrapper .sale {
   color: #ef6530;
+}
+
+.button {
+  margin: 0 auto;
+  width: 20%;
 }
 
 @media screen and (max-width: 437px) {

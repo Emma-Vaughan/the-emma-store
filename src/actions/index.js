@@ -34,3 +34,10 @@ export const searchTerm = (data) => {
     type: "SEARCHTERM",
   };
 };
+
+export const basket = (data) => {
+  return {
+    data: data,
+    type: "BASKET",
+  };
+};
