@@ -17,7 +17,9 @@ function Header() {
         </Link>
         <button className={styles.signIn}>Sign In</button>
         <div className={styles.basket}>
-          <i className="fa fa-shopping-basket"></i>
+          <Link to="/basket">
+            <i className="fa fa-shopping-basket"></i>
+          </Link>
         </div>
         <form className={styles.searchBar}>
           <input
