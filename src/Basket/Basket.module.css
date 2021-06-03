@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  margin: 3% 0;
+}
+
+.card img,
+.card h4,
+.card p {
+  margin: 0 auto;
+  padding: 7px;
+}
+
+.card h4,
+.card p {
+  align-content: flex-start;
+}
+
+.card img {
+  height: 400px;
+  width: 430px;
+}
+
+.card p {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
