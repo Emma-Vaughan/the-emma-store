@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 function Basket() {
   const basketState = useSelector((state) => state.basketReducer);
 
-  console.log("http://localhost:8000/catalogue/" + basketState);
-
   const { catalogue } = useFetch("http://localhost:8000/catalogue/");
 
   const itemsToRender = catalogue.filter((item) => item.id === basketState);
@@ -21,9 +19,6 @@ function Basket() {
           </Link>
           <h4>{product.description}</h4>
           <p>£{(product.price / 100).toFixed(2)}</p>
-          {product.price < product.RRP && (
-            <p className={styles.sale}> ON SALE</p>
-          )}
         </div>
       ))}
     </div>
