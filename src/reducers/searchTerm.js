@@ -1,10 +1,9 @@
 const searchTermReducer = (state = "", action) => {
-  console.log(action);
   switch (action.type) {
     case "SEARCHTERM":
       return action.data;
     case "RESET":
-      return false;
+      return "";
     default:
       return state;
   }
