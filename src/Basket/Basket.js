@@ -11,12 +11,10 @@ function Basket() {
   const itemsToRender = catalogue.filter((item) => item.id === basketState);
 
   return (
-    <div className={styles.basketMain}>
+    <div>
       {itemsToRender.map((product) => (
         <div className={styles.card} key={product.id}>
-          <Link to={`/catalogue/${product.id}`}>
-            <img alt="product" src={product.img} />
-          </Link>
+          <img alt="product" src={product.img} />
           <h4>{product.description}</h4>
           <p>£{(product.price / 100).toFixed(2)}</p>
         </div>

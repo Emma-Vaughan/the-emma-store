@@ -34,7 +34,15 @@
 
 .button {
   margin: 0 auto;
-  width: 20%;
+  width: 10%;
+  border-radius: 10px;
+  background-color: #ef6530;
+  color: white;
+  box-shadow: none;
+  border: none;
+  padding: 1% 0;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 437px) {
