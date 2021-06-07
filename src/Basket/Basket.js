@@ -1,14 +1,15 @@
 import styles from "./Basket.module.css";
 import { useSelector } from "react-redux";
 import useFetch from "../useFetch";
-import { Link } from "react-router-dom";
 
 function Basket() {
   const basketState = useSelector((state) => state.basketReducer);
 
   const { catalogue } = useFetch("http://localhost:8000/catalogue/");
 
-  const itemsToRender = catalogue.filter((item) => item.id === basketState);
+  const itemsToRender = catalogue.filter((item) =>
+    basketState.includes(item.id)
+  );
 
   return (
     <div>
