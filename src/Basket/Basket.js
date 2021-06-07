@@ -11,7 +11,7 @@ function Basket() {
     basketState.includes(item.id)
   );
 
-  const reducer = (a, b) => a + b.price;
+  const reducer = (total, newItem) => total + newItem.price;
 
   const total = itemsToRender.reduce(reducer, 0);
 
