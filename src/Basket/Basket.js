@@ -11,6 +11,10 @@ function Basket() {
     basketState.includes(item.id)
   );
 
+  const reducer = (total, newItem) => total + newItem.price;
+
+  const total = itemsToRender.reduce(reducer, 0);
+
   return (
     <div>
       {itemsToRender.map((product) => (
@@ -20,6 +24,7 @@ function Basket() {
           <p>£{(product.price / 100).toFixed(2)}</p>
         </div>
       ))}
+      <h3 className={styles.total}>Total: £{(total / 100).toFixed(2)}</h3>
     </div>
   );
 }

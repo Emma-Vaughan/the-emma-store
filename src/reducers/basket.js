@@ -1,8 +1,7 @@
 const basketReducer = (state = [], action) => {
-  const prevBasket = [...state];
   switch (action.type) {
     case "BASKET":
-      return [action.data, ...prevBasket];
+      return [action.data, ...state];
     default:
       return state;
   }
