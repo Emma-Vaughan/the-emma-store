@@ -1,3 +1,7 @@
+.basket {
+  width: 100%;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -26,4 +30,8 @@
 .card p {
   font-size: 18px;
   letter-spacing: 2px;
+}
+
+.total {
+  margin: 0 auto;
 }
